@@ -37,3 +37,8 @@
 /examples/skyBoard/npm-debug.log*
 /examples/skyBoard/yarn-debug.log*
 /examples/skyBoard/yarn-error.log*
+
+/examples/skyBoard-backend/dist
+/examples/skyBoard-backend/node_modules
+
+node_modules/

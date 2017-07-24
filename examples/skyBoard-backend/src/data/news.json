@@ -1,0 +1,39 @@
+{
+    "news": [
+        {
+            "name": "Damian",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 1234312
+        },
+        {
+            "name": "Tomasz",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 12343
+        },
+        {
+            "name": "Sojek",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 123321
+        },
+        {
+            "name": "Mati",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 123342
+        },
+        {
+            "name": "Kiero",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 123645
+        },
+        {
+            "name": "Mario",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 12344324
+        },
+        {
+            "name": "Justyna",
+            "news": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar augue a eleifend. Nam commodo, magna non luctus malesuada, tellus enim porttitor diam, vitae elementum diam ex ut ex. Maecenas eget tincidunt ex. Phasellus eu nunc et libero placerat pellentesque et a nisi. Morbi rhoncus ultricies purus, vel pulvinar massa efficitur vel. Vivamus quis erat convallis, vestibulum nunc suscipit, tristique sapien",
+            "date": 1234353
+        }
+    ]
+}

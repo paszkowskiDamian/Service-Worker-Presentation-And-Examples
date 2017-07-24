@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "glamor": "^2.20.35",
+    "glamorous": "^3.23.5",
+    "material-ui": "^0.18.7",
+    "react-tap-event-plugin": "^2.0.1"
+  }
+}
