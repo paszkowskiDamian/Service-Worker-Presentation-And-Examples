@@ -1,0 +1,25 @@
+[
+    {
+        "ownerName": "Damian",
+        "ownerEmail": "damian.paszkowski@skygate.pl",
+        "foodProviderId": 1,
+        "dishId": 0,
+        "isOpen": true,
+        "guests": [
+            {
+                "name": "Marcin",
+                "email": "marcin.krawczyk@skygate.pl",
+                "comment": "jasna bułka, średnio + ziemniaczki",
+                "dishId": 1,
+                "paid": true
+            },
+            {
+                "name": "Dawid",
+                "email": "marcin.krawczyk@skygate.pl",
+                "comment": "jasna bułka, średnio",
+                "dishId": 1,
+                "paid": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+/skyfood/frontend/node_modules
+/skyfood/backend/node_modules
+
+/skyfood/frontend/build
+/skyfood/backend/dist
+
+/reveal.js.idea/
+/reveal.js*.iml
+/reveal.js*.iws
+/reveal.js*.eml
+/reveal.jsout/
+/reveal.js.DS_Store
+/reveal.js.svn
+/reveal.jslog/*.log
+/reveal.jstmp/**
+/reveal.jsnode_modules/
+/reveal.js.sass-cache
+/reveal.jscss/reveal.min.css
+/reveal.jsjs/reveal.min.js
+
+/examples/skyBoard
+
+# dependencies
+/examples/skyBoard/node_modules
+
+# testing
+/examples/skyBoard/coverage
+
+# production
+/examples/skyBoard/build
+
+# misc
+/examples/skyBoard/.DS_Store
+/examples/skyBoard/.env.local
+/examples/skyBoard/.env.development.local
+/examples/skyBoard/.env.test.local
+/examples/skyBoard/.env.production.local
+
+/examples/skyBoard/npm-debug.log*
+/examples/skyBoard/yarn-debug.log*
+/examples/skyBoard/yarn-error.log*

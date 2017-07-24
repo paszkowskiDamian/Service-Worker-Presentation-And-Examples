@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/simple.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2 style="font-weight: bold">Let's talk about <span class="red">apps</span></h1>
+					<aside class="notes">
+						Let's talk about apps. We're leaving in times when eweryting needs an app. Our lights,fidges have an app.
+					</aside>
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/SrbE7VlsF5rkk" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<aside class="notes">
+					Let's talk about apps. We're leaving in times when eweryting needs an app. Our lights,
+				</aside>
+			</section>
+			<section>
+				<div style="display: flex; justify-content: space-between; position: relative">
+					<div style="display: flex; flex-direction: column">
+						<h3>Web</h3>
+						<div class="fragment fade-up" data-fragment-index="1">online</div>
+						<div class="fragment fade-up" data-fragment-index="2">browsers</div>
+						<div class="fragment fade-up" data-fragment-index="3">space saving</div>
+						<div class="fragment fade-up" data-fragment-index="4">have limitations</div>
+					</div>
+					<div style="display: flex; flex-direction: column">
+						<h3>Native</h3>
+						<div class="fragment fade-up" data-fragment-index="1">offline</div>
+						<div class="fragment fade-up" data-fragment-index="2">installing</div>
+						<div class="fragment fade-up" data-fragment-index="3">take space</div>
+						<div class="fragment fade-up" data-fragment-index="4">performant</div>
+					</div>
+				</div>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					We may divide apps into two categories, web and native. Each of them have their adventages and disadventages
+					- one of advantages of nativa apps over web apps are offline expieirence
+					- web apps are more convinient to use
+					- easy to shere
+					- it take more effort to use native app
+					- native apps use space
+					- however native apps have acces to utilities that web does not
+					</textarea>
+				</aside>
+			</section>
+			<section>
+				<h2 style="font-weight: bold">the solution?</h1>
+			</section>
+			<section>
+				<h2 style="font-weight: bold"><span class="red">Progressive</span> apps</h1>
+					<aside class="notes">
+						- Let's see what they are and later on how to build them using modern browsers api
+					</aside>
+			</section>
+			<section>
+				<h3>
+					A <span class="red">Progressive Web App</span> uses modern web capabilities to deliver an app-like user <span class="red">experience</span>
+				</h3>
+				<aside class="notes">
+
+				</aside>
+			</section>
+			<section>
+				<h3 class="fragment highlight-current-red">
+					Reliable
+				</h3>
+				<h3 class="fragment highlight-current-red">
+					Fast
+				</h3>
+				<h3 class="fragment highlight-current-red">
+					Engaging
+				</h3>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Reliable , Load instantly and never show the downasaur, even in uncertain network conditions. 
+					- Fast , Respond quickly to user interactions with silky smooth animations and no janky scrolling. 
+					- Engaging ,Feel like a natural app on the device, with an immersive user experience
+				</textarea >
+				</aside>
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/OQ872dEsRi8cU" width="480" height="349" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- In order to implement progressive web app we need to talk about some modern browsers API's
+				</textarea >
+				</aside>
+			</section>
+			<section data-background-color="#FE4646">
+					<h2 style="color: white">Service workers</h2>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- a Service worker is a JavaScript script that your browser runs in the background, sepreted from web page
+					-- thus you can't acces the DOM directly
+					-- comunication with page via postMessage interface
+					- it is programable network proxy, allowing you to controll how network requests from page are handeled.
+					- include features as
+					-- manage cash 
+					-- push notification
+					-- background sync
+
+					-before service workers AppCache was available
+				</textarea >
+				</aside>
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/CmllWmxb7SFvW" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- kind of incredible
+					- They can do powerfull things as hijacking connection, fabricate and filter responses,
+					- that's why in order to use them you need HTTPS setup on your server
+				</textarea >
+				</aside>
+			</section>
+			<section>
+				<h2>Let's look into code</h2>
+				<iframe src="https://giphy.com/embed/srbiWWa0VW2YM" width="470" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- kind of incredible
+					- They can do powerfull things as hijacking connection, fabricate and filter responses,
+					- that's why in order to use them you need HTTPS setup on your server
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### registration
+					```javascript
+					if ('serviceWorker' in navigator) {
+						navigator.serviceWorker.register('/sw.js')
+							.then((registration) => {
+						// Registration was successful
+						console.log(
+							'Registration successful with scope: ',
+							registration.scope);
+						}, (err) => {
+						// registration failed :(
+						console.log('Registration failed: ', err);
+						});
+					}
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- first we check if service worker is available in navigator object
+					- We are registering servise worker from 'sw.js' with global scope
+					- it means that service worker will recife fetch events from everting on this domain
+					- We may specify scope as second argument 
+					- Service workers are promise based 
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### instalation
+					```javascript
+					self.addEventListener('install', function(event) {
+  					// Perform install steps
+					});
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- after registration let's shift to the point of view of the service worker script, which handles the install event.
+					- inside we need to open our cashe, and cashe files
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### cashe
+					```javascript
+					var CACHE_NAME = 'my-site-cache-v1';
+					var urlsToCache = [
+					'/',
+					'/styles/main.css',
+					'/script/main.js'
+					];
+
+					self.addEventListener('install', function(event) {
+					// Perform install steps
+					event.waitUntil(
+						caches.open(CACHE_NAME)
+						.then(function(cache) {
+							console.log('Opened cache');
+							return cache.addAll(urlsToCache);
+						})
+					);
+					});
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- If all the files are successfully cached, then the service worker will be installed. If any of the files fail to download, then the install step will fail.
+					- Now that you've installed a service worker, you probably want to return one of your cached responses, right?
+					- After a service worker is installed and the user navigates to a different page or refreshes, the service worker will begin to receive fetch events.
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### fetch
+					```javascript
+					self.addEventListener('fetch', function(event) {
+						event.respondWith(
+							caches.match(event.request)
+							.then(function(response) {
+								// Cache hit - return response
+								if (response) {
+								return response;
+								}
+								return fetch(event.request);
+							}
+							)
+						);
+					});
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Here we've defined our fetch event and within event.respondWith(), we pass in a promise from caches.match(). This method looks at the request and finds any cached results from any of the caches your service worker created..
+					- If we have a matching response, we return the cached value, otherwise we return the result of a call to fetch, which will make a network request and return the data if anything can be retrieved from the network
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### fetch and cashe
+					```javascript
+					self.addEventListener('fetch', function(event) {
+						event.respondWith(
+							caches.match(event.request)
+							.then(function(response) {
+								// Cache hit - return response
+								if (response) {
+								return response;
+								}
+
+								// IMPORTANT: Clone the request. A request is a stream and
+								// can only be consumed once. Since we are consuming this
+								// once by cache and once by the browser for fetch, we need
+								// to clone the response.
+								var fetchRequest = event.request.clone();
+
+								return fetch(fetchRequest).then(
+								function(response) {
+									// Check if we received a valid response
+									if(!response 
+									|| response.status !== 200 
+									|| response.type !== 'basic') {
+									return response;
+									}
+
+									// IMPORTANT: Clone the response. A response is a stream
+									// and because we want the browser to consume the response
+									// as well as the cache consuming the response, we need
+									// to clone it so we have two streams.
+									var responseToCache = response.clone();
+
+									caches.open(CACHE_NAME)
+									.then(function(cache) {
+										cache.put(event.request, responseToCache);
+									});
+
+									return response;
+								}
+								);
+							})
+							);
+					});
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Here we've defined our fetch event and within event.respondWith(), we pass in a promise from caches.match(). This method looks at the request and finds any cached results from any of the caches your service worker created..
+					- If we have a matching response, we return the cached value, otherwise we return the result of a call to fetch, which will make a network request and return the data if anything can be retrieved from the network
+				</textarea >
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					```javascript
+					self.addEventListener('activate', function(event) {
+
+					var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+
+					event.waitUntil(
+						caches.keys().then(function(cacheNames) {
+						return Promise.all(
+							cacheNames.map(function(cacheName) {
+							if (cacheWhitelist.indexOf(cacheName) === -1) {
+								return caches.delete(cacheName);
+							}
+							})
+						);
+						})
+					);
+					});
+					```
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Here we've defined our fetch event and within event.respondWith(), we pass in a promise from caches.match(). This method looks at the request and finds any cached results from any of the caches your service worker created..
+					- If we have a matching response, we return the cached value, otherwise we return the result of a call to fetch, which will make a network request and return the data if anything can be retrieved from the network
+				</textarea >
+				</aside>
+			</section>
+			<section >
+				<img style="border: none; box-shadow: none; margin: 0" src="https://developers.google.com/web/fundamentals/getting-started/primers/imgs/sw-lifecycle.png" />
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Here we've defined our fetch event and within event.respondWith(), we pass in a promise from caches.match(). This method looks at the request and finds any cached results from any of the caches your service worker created..
+					- If we have a matching response, we return the cached value, otherwise we return the result of a call to fetch, which will make a network request and return the data if anything can be retrieved from the network
+				</textarea >
+				</aside>
+			</section>
+			<section data-background-color="#FE4646">
+					<h2 style="color: white">Demo</h2>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### Reference
+					- developers.google.com/web/progressive-web-apps/
+					- Going offline with Service Workers w/Phil Nash
+				</textarea >
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Here we've defined our fetch event and within event.respondWith(), we pass in a promise from caches.match(). This method looks at the request and finds any cached results from any of the caches your service worker created..
+					- If we have a matching response, we return the cached value, otherwise we return the result of a call to fetch, which will make a network request and return the data if anything can be retrieved from the network
+					### Browser suport
+					-  Service workers are supported by Chrome, Firefox and Opera. Microsoft Edge is now showing public support. Even Safari has dropped hints of future development.
+				</textarea >
+				</aside>
+			</section>
+			<section>
+					<h3>Where are you of to?</h3>
+					<iframe src="https://giphy.com/embed/OmBdpEgooB1ni" width="480" height="182" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
+			</section>
+			<section>
+					<h3>IndexDB</h3>
+					<h3>CasheAPI</h3>
+					<h3>manifest.json</h3>
+			</section>
+			<section data-background-color="#FE4646">
+					<h2 style="color: white">Thank you</h2>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>

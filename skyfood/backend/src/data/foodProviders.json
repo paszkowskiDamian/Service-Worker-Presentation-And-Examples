@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Zdrowa Krowa",
+        "phone": "+48 733 253 730",
+        "menu": [
+            {
+                "id": 0,
+                "name": "classic 120g",
+                "description": "soczysta wołowina, sałata lodowa, czerwona cebula, pomidor, świeży ogórek, pikle, ketchup, majonez",
+                "price": 14
+            },
+            {
+                "id": 1,
+                "name": "classic 180g",
+                "description": "soczysta wołowina, sałata lodowa, czerwona cebula, pomidor, świeży ogórek, pikle, ketchup, majonez",
+                "price": 18
+            },
+            {
+                "id": 2,
+                "name": "cheese 120g",
+                "description": "soczysta wołowina, cheddar, sałata lodowa, czerwona cebula, pomidor, świeży ogórek, pikle, ketchup, majonez",
+                "price": 15
+            }
+        ]
+    }
+]
