@@ -24,8 +24,10 @@ class App extends Component {
 
   componentDidMount() {
     fetch(`http://192.168.56.1:3030/news`, {
-      mode: 'no-cors',
-      headers: { 'Access-Control-Allow-Origin': '*' }
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      }
     })
       .then(res => {
         console.log(res)
@@ -36,7 +38,7 @@ class App extends Component {
           throw { error: res }
         }
       })
-      .then(data => console.log(data))
+      .then(data =>console.log(data))
       .catch(err => console.log(err))
 
   }
